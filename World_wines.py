@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('winemag-data-130k-v2.csv')
+df = pd.read_csv('../pythonProject/data files/winemag-data-130k-v2.csv')
 
 print(df.shape)
 print(df.head())
