@@ -33,6 +33,7 @@ import requests
 request = requests.get('https://api.globalwinescore.com/')
 print(request.status_code)
 
+#create graphs
 
 
 
