@@ -1,16 +1,14 @@
 import pandas as pd
 
-movies_ = pd.read_csv("C:/Users/User/PycharmProjects/pythonProject/tmdb_5000_movies.csv")
-credits = pd.read_csv("C:/Users/User/PycharmProjects/pythonProject/tmdb_5000_credits.csv")
+rt_critic = pd.read_csv("C:/Users/User/PycharmProjects/pythonProject/data files/rotten_tomatoes_critic_reviews.csv")
+rt_reviews = pd.read_csv("C:/Users/User/PycharmProjects/pythonProject/data files/rotten_tomatoes_movies.csv")
 
-print(movies_.head())
-print(credits.head())
+print(rt_critic.head())
+print(rt_reviews.head())
 
-movies_.rename(columns={'id_':'movie_id'})
+left = rt_critic.set_index(['rotten_tomatoes_link'])
+right = rt_reviews.set_index(['rotten_tomatoes_link'])
 
-left = movies_.set_index(['movie_id'])
-right = credits.set_index(['movie_id'])
-
-merged_data= pd.merge(left,right,on='movie_id')
+merged_data = pd.merge(left, right, on='rotten_tomatoes_link')
 
 print(merged_data.head(10))
