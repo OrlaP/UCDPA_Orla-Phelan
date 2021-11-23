@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
-import matplotlib.pyplot as plt
+from sklearn import tree
+from matplotlib import pyplot as plt
 
 heart_stat = pd.read_csv('C:/Users/User/PycharmProjects/pythonProject/data files/heart.csv')
 
@@ -14,11 +15,22 @@ X = heart_stat[heart_features]
 
 print (X.describe())
 
-heart_model = DecisionTreeRegressor(random_state=1)
+heart_model = DecisionTreeRegressor(max_depth = 3, random_state=1234)
 
 heart_model.fit(X,y)
 
 print(X.head())
 print("The predictions are")
 print(heart_model.predict(X.head()))
+
+text_representation = tree.export_text(heart_model)
+print ("The report")
+print(text_representation)
+
+fig = plt.figure(figsize=(10,5))
+_ = tree.plot_tree(heart_model, feature_names=None, filled=True)
+
+plt.show()
+
+
 
