@@ -12,3 +12,4 @@ right = rt_reviews.set_index(['rotten_tomatoes_link'])
 merged_data = pd.merge(left, right, on='rotten_tomatoes_link')
 
 print(merged_data.head(10))
+
