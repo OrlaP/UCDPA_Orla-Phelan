@@ -17,7 +17,7 @@ print(df.loc[:,"price"])
 # with median of that column
 df['price'] = df['price'].fillna(df['price'].median())
 print(df['price'])
-# selecting designation column
+# selecting designation     column
 print(df.loc[:,'designation'])
 # removed column 'designation'
 print(df.drop(['designation'], axis=1))
@@ -30,7 +30,7 @@ print(df2)
 
 #api request
 import requests
-request = requests.get('https://api.globalwinescore.com/')
+request = requests.get("https://gabamnml-health-v1.p.rapidapi.com/bmi")
 print(request.status_code)
 
 
