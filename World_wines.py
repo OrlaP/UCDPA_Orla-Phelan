@@ -24,15 +24,11 @@ print(df.drop(['designation'], axis=1))
 # create wine dictionary
 wine = {'country', 'description', 'points', 'price', 'province', 'title', 'variety', 'title'}
 
+print(wine)
+
 df2 = pd.DataFrame(wine)
 
 print(df2)
-
-#api request
-import requests
-request = requests.get("https://gabamnml-health-v1.p.rapidapi.com/bmi")
-print(request.status_code)
-
 
 
 
