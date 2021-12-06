@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv("/data files/heart.csv")
+df = pd.read_csv("C:/Users/User/PycharmProjects/UCD-Project-/data files/heart.csv")
 
 df2= pd.DataFrame(df)
 
@@ -26,7 +26,7 @@ for numbers in January:
 counts_dict = {}
 
 # Iterate over the file chunk by chunk
-for chunk in pd.read_csv("/data files/heart.csv", chunksize = 10):
+for chunk in pd.read_csv("C:/Users/User/PycharmProjects/UCD-Project-/data files/heart.csv", chunksize = 10):
     # Iterate over the "chol" column in DataFrame
     for entry in chunk["chol"]:
         if entry in counts_dict.keys():
