@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn import tree
 from matplotlib import pyplot as plt
 
-heart_stat = pd.read_csv('C:/Users/User/PycharmProjects/pythonProject/data files/heart.csv')
+heart_stat = pd.read_csv('C:/Users/User/PycharmProjects/UCD-Project-/data files/heart.csv')
 
 print(heart_stat.columns)
 
