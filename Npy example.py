@@ -2,7 +2,7 @@ import numpy as np
 from numpy import random
 import pandas as pd
 
-df = pd.read_csv('C:/Users/User/PycharmProjects/pythonProject/data files/heart.csv')
+df = pd.read_csv('C:/Users/User/PycharmProjects/UCD-Project-/data files/heart.csv')
 
 heart = np.array(df[1:], dtype=float)
 
