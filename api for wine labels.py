@@ -3,7 +3,7 @@ import requests
 url = "https://wine-recognition2.p.rapidapi.com/v1/version"
 
 headers = {
-    'x-rapidapi-key': "47b4b95695mshddb0626cdd6e928p161db1jsn704979346acd",
+    'x-rapidapi-key",
     'x-rapidapi-host': "wine-recognition2.p.rapidapi.com"
     }
 
